@@ -232,3 +232,24 @@ if __name__ == "__main__":
 	instances = mgr.create_instance(ami_id, keypair_name, instance_type, min_count, max_count, monitoring, sg_id, shutdown_behavior )
 
 	mgr._logging.create_log("INFO", "Instances created\n" + str(instances) + "\n---------------------\n" )
+
+
+	#If you want to stop/terminate instances created above - please uncomment following code
+	"""
+	tobestopped = []
+	for i in range( len( instances)):
+		tobestopped.append( instances[i].instance_id )
+
+	
+	tobeterminated = []
+	for i in range( len( instances)):
+		tobeterminated.append( instances[i].instance_id )
+	"""
+
+	#Uncomment if you want to stop the insetances	
+	#mgr._logging.create_log("INFO", "Stopping Instances\n" + str(instances) + "\n---------------------\n" )
+	#stop_instance_info = mgr.stop_ec2_instances(instances)
+
+	#Uncomment if you want to terminate the instances
+	#mgr._logging.create_log("INFO", "Terminating Instances\n" + str(instances) + "\n---------------------\n" )
+	#terminate_instance_info =  mgr.terminate_ec2_instance( instances ) 
