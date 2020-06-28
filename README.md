@@ -1,6 +1,14 @@
 # python-aws-spot-instance-manager
 This library provides an easy interface for managing AWS Spot Instances
 
+<B>Test Environment</B>
+
+Code is tested on <B>Python version 3.6.9</B> and <B>Ubuntu 18.04</B> operating system.
+
+<B>AWS Credentials File</B>
+Syntax for AWS Credentials file can be found here: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
+
+
 <B>Installation</B>
 
   Please clone the library using your preferred GIT software
